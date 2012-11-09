@@ -26,10 +26,14 @@ Image loading code added by me
 <div id="mytweets" ></div>
 ```
 
- 3. Call jqTweets!
+ 3. Create a jqTweets object, then load some tweets!
 
 ```js
 var tweets = new jqTweet("YourUsername", "#mytweets", 10);
+
+tweets.loadTweets(function() {
+    console.log("Got tweets!");
+});
 ```
 
 Tweets will be fetched from the twitter server and stuffed into your div. Any
@@ -42,6 +46,9 @@ be a css identifier, as in the example above, or an actual element), and the
 number of tweets you would like to fetch. All tweet fetching runs
 asynchronously.
 
+You can refresh the twitter feed at any time by calling
+`jqTweets.loadTweets` again, which takes an optional completion callback.
+
 Note that the
 [Twitter API terms of service](https://dev.twitter.com/terms/api-terms) and
 [rate limiting](https://dev.twitter.com/docs/rate-limiting) apply to this
@@ -51,16 +58,8 @@ day per IP Address.
 It is advised that the user add client-side caching to prevent going over this
 limit.
 
-You can refresh the twitter feed at any time by calling
-`jqTweets.loadTweets`, which takes an optional completion callback.
 
-```js
-tweets.loadTweets(function() {
-    console.log("Got new tweets!");
-});
-```
-
-4. (Optional) If you are expecting images from Instagram in your tweet feed,
+ 4. (Optional) If you are expecting images from Instagram in your tweet feed,
 add the following css to your page somewhere.
 
 ```css
