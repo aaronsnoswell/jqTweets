@@ -6,11 +6,6 @@ that produced by the Twitter
 ["Embedded Timelines"](https://dev.twitter.com/docs/embedded-timelines)
 feature.
 
-Eg,
-
-<a class="twitter-timeline" data-dnt=true href="https://twitter.com/aaronsnoswell" data-widget-id="266842420052901888">Tweets by @aaronsnoswell</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
 This code is based on the
 [excellent tutorial series at Queeness.com](http://www.queness.com/post/8881/create-a-twitter-feed-with-attached-images-from-media-entities)
 Image loading code added by me
