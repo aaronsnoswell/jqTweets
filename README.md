@@ -89,6 +89,10 @@ kinda like the following;
 </div>
 ```
 
-Happy Coding!
+## License
 
+EAC is released under the MIT license - you're good to use it wherever,
+I'd love to know about it though ;)
+
+Happy Coding!
 
