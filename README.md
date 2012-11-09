@@ -16,30 +16,26 @@ Image loading code added by me
 <!-- Freaking MarkDown parsers... -->
 <ol>
     <li>
-    Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html file.
+    Include <a href="http://jquery.com/">jQuery</a> and jquery.jqtweets.js to your html file.
 
-    ```html
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.jqtweets.js"></script>
-    ```
+    <code><script src="js/jquery.js"></script>
+<script src="js/jquery.jqtweets.js"></script>
+</code>
     </li>
     <li>
         Create a div where you would like the tweets to show up.
 
-        ```html
-        <div id="mytweets" ></div>
-        ```
+        <code><div id="mytweets" ></div></code>
     </li>
     <li>
         Create a jqTweets object, then load some tweets!
 
-        ```js
-        var tweets = new jqTweet("YourUsername", "#mytweets", 10);
+        <code>var tweets = new jqTweet("YourUsername", "#mytweets", 10);
 
-        tweets.loadTweets(function() {
-            console.log("Got tweets!");
-        });
-        ```
+tweets.loadTweets(function() {
+    console.log("Got tweets!");
+});
+</code>
 
         Tweets will be fetched from the twitter server and stuffed into your div. Any
         images from http://pic.twitter.com/ or http://instagr.am/ will automatically
@@ -51,19 +47,18 @@ Image loading code added by me
         number of tweets you would like to fetch.
 
         You can refresh the twitter feed at any time by calling
-        `jqTweets.loadTweets` again, which takes an optional completion callback. All
+        <code>jqTweets.loadTweets</code> again, which takes an optional completion callback. All
         tweet fetching runs asynchronously.
     </li>
     <li>
         (Optional) If you are expecting images from Instagram in your tweet feed,
         add the following css to your page somewhere.
 
-        ```css
-        /* Hide tweet images that haven't been fetched from Instagram yet */
-        img[src=""] {
-            display: none;
-        }
-        ```
+        <code>/* Hide tweet images that haven't been fetched from Instagram yet */
+img[src=""] {
+    display: none;
+}
+</code>
     </li>
 </ol>
 
