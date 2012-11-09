@@ -1,29 +1,39 @@
 # jqTweets
 
 A simple jQuery plugin to display a twitter feed with images from
-pic.twitter.com and Instagram.
+pic.twitter.com and Instagram. Output from this library looks very simmilar to
+that produced by the Twitter
+["Embedded Timelines"](https://dev.twitter.com/docs/embedded-timelines)
+feature.
 
-This code is based on the excellent tutorial at Queeness.com. See
-http://www.queness.com/post/8881/create-a-twitter-feed-with-attached-images-from-media-entities
+Eg,
+
+<html>
+<a class="twitter-timeline" data-dnt=true href="https://twitter.com/aaronsnoswell" data-widget-id="266842420052901888">Tweets by @aaronsnoswell</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</html>
+
+This code is based on the
+[excellent tutorial series at Queeness.com](http://www.queness.com/post/8881/create-a-twitter-feed-with-attached-images-from-media-entities)
 Image loading code added by me
-((Aaron Snoswell)[http://twitter.com/aaronsnoswell]), the author.
+([Aaron Snoswell](http://twitter.com/aaronsnoswell)), the author.
 
 ## Usage
 
-1. Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html file.
+ 1. Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html file.
 
 ```html
 <script src="js/jquery.js"></script>
 <script src="js/jquery.jqtweets.js"></script>
 ```
 
-2. Create a div where you would like the tweets to show up.
+ 2. Create a div where you would like the tweets to show up.
 
 ```html
 <div id="mytweets" ></div>
 ```
 
-3. Call jqTweets!
+ 3. Call jqTweets!
 
 ```js
 var tweets = new jqTweet("YourUsername", "#mytweets", 10);
@@ -36,11 +46,14 @@ be asynchronously fetched and stuffed into the feed as well.
 jqTweet takes 3 paramaters, the username you would like to fetch tweets for
 (without the '@' prefix), the div you would like to place the tweets in (can
 be a css identifier, as in the example above, or an actual element), and the
-number of tweets you would like to fetch. The initial fetch of tweets runs
+number of tweets you would like to fetch. All tweet fetching runs
 asynchronously.
 
-Note that the Twitter API usage requirements apply to this library - you will
-only be able to load tweets from the server 150 times per day per IP Address.
+Note that the
+[Twitter API terms of service](https://dev.twitter.com/terms/api-terms) and
+[rate limiting](https://dev.twitter.com/docs/rate-limiting) apply to this
+library - you will only be able to load tweets from the server 150 times per
+day per IP Address.
 
 It is advised that the user add client-side caching to prevent going over this
 limit.
@@ -66,7 +79,8 @@ img[src=""] {
 
 ## Markup
 
-The tweet markup is as follows:
+The tweet markup is desinged to be minimalistic and easy to style. It looks
+kinda like the following;
 
 ```html
 <div id="tweets">
