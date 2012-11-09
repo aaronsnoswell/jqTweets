@@ -70,7 +70,9 @@ library - don't do stupid things and don't try and load tweets from Twitter
 more than 150 times per day per IP Address.
 
 It is advised that the user add client-side caching to prevent going over this
-limit.
+limit. A library, such as
+[easy-app-cache](https://github.com/aaronsnoswell/easy-app-cache) might be
+useful for this ;)
 
 ## Markup
 
