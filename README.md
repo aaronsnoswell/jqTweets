@@ -13,54 +13,53 @@ Image loading code added by me
 
 ## Usage
 
-<!-- Freaking MarkDown parsers... -->
-<ol>
-    <li>
-    Include <a href="http://jquery.com/">jQuery</a> and jquery.jqtweets.js to your html file.
+ 1) Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html
+file.
 
-    <code><script src="js/jquery.js"></script>
+```html
+<script src="js/jquery.js"></script>
 <script src="js/jquery.jqtweets.js"></script>
-</code>
-    </li>
-    <li>
-        Create a div where you would like the tweets to show up.
+```
 
-        <code><div id="mytweets" ></div></code>
-    </li>
-    <li>
-        Create a jqTweets object, then load some tweets!
+ 2) Create a div where you would like the tweets to show up.
 
-        <code>var tweets = new jqTweet("YourUsername", "#mytweets", 10);
+```html
+<div id="mytweets" ></div>
+```
+
+ 3) Create a jqTweets object, then load some tweets!
+
+```js
+var tweets = new jqTweet("YourUsername", "#mytweets", 10);
 
 tweets.loadTweets(function() {
     console.log("Got tweets!");
 });
-</code>
+```
 
-        Tweets will be fetched from the twitter server and stuffed into your div. Any
-        images from http://pic.twitter.com/ or http://instagr.am/ will automatically
-        be asynchronously fetched and stuffed into the feed as well.
+Tweets will be fetched from the twitter server and stuffed into your div. Any
+images from http://pic.twitter.com/ or http://instagr.am/ will automatically
+be asynchronously fetched and stuffed into the feed as well.
 
-        jqTweet takes 3 paramaters, the username you would like to fetch tweets for
-        (without the '@' prefix), the div you would like to place the tweets in (can
-        be a css identifier, as in the example above, or an actual element), and the
-        number of tweets you would like to fetch.
+jqTweet takes 3 paramaters, the username you would like to fetch tweets for
+(without the '@' prefix), the div you would like to place the tweets in (can
+be a css identifier, as in the example above, or an actual element), and the
+number of tweets you would like to fetch.
 
-        You can refresh the twitter feed at any time by calling
-        <code>jqTweets.loadTweets</code> again, which takes an optional completion callback. All
-        tweet fetching runs asynchronously.
-    </li>
-    <li>
-        (Optional) If you are expecting images from Instagram in your tweet feed,
-        add the following css to your page somewhere.
+You can refresh the twitter feed at any time by calling
+`jqTweets.loadTweets` again, which takes an optional completion callback. All
+tweet fetching runs asynchronously.
 
-        <code>/* Hide tweet images that haven't been fetched from Instagram yet */
+
+ 4) (Optional) If you are expecting images from Instagram in your tweet feed,
+add the following css to your page somewhere.
+
+```css
+/* Hide tweet images that haven't been fetched from Instagram yet */
 img[src=""] {
     display: none;
 }
-</code>
-    </li>
-</ol>
+```
 
 ## Twitter API Limits
 
