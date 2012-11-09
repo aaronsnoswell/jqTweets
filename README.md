@@ -13,20 +13,20 @@ Image loading code added by me
 
 ## Usage
 
- 1. Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html file.
+1. Include [jQuery](http://jquery.com/) and jquery.jqtweets.js to your html file.
 
 ```html
 <script src="js/jquery.js"></script>
 <script src="js/jquery.jqtweets.js"></script>
 ```
 
- 2. Create a div where you would like the tweets to show up.
+2. Create a div where you would like the tweets to show up.
 
 ```html
 <div id="mytweets" ></div>
 ```
 
- 3. Create a jqTweets object, then load some tweets!
+3. Create a jqTweets object, then load some tweets!
 
 ```js
 var tweets = new jqTweet("YourUsername", "#mytweets", 10);
@@ -43,11 +43,11 @@ be asynchronously fetched and stuffed into the feed as well.
 jqTweet takes 3 paramaters, the username you would like to fetch tweets for
 (without the '@' prefix), the div you would like to place the tweets in (can
 be a css identifier, as in the example above, or an actual element), and the
-number of tweets you would like to fetch. All tweet fetching runs
-asynchronously.
+number of tweets you would like to fetch.
 
 You can refresh the twitter feed at any time by calling
-`jqTweets.loadTweets` again, which takes an optional completion callback.
+`jqTweets.loadTweets` again, which takes an optional completion callback. All
+tweet fetching runs asynchronously.
 
 Note that the
 [Twitter API terms of service](https://dev.twitter.com/terms/api-terms) and
@@ -59,7 +59,7 @@ It is advised that the user add client-side caching to prevent going over this
 limit.
 
 
- 4. (Optional) If you are expecting images from Instagram in your tweet feed,
+4. (Optional) If you are expecting images from Instagram in your tweet feed,
 add the following css to your page somewhere.
 
 ```css
